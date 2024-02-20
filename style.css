@@ -16,9 +16,6 @@ font-size: 16px;
 background-color: #1B2B5B;
 font-family: "Montserrat", sans-serif;
 text-shadow: 1px 1px black;
-display: flex;
-flex-direction: column;
-align-items: center;
 }
 
 header {
@@ -29,6 +26,7 @@ header {
 main {
     background-color: #234679;
     width: 1200px;
+    margin: auto;
 
 }
 
@@ -37,11 +35,9 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1920px;
     height: 60px;
     background: linear-gradient(to bottom, #1F3066, #16234D);
     position: fixed;
-    top: 0;
     width: 100%;
     z-index: 1;
 }
@@ -83,18 +79,21 @@ h2 {
 /* HERO */
 #hero {
     background-image: url(./images/Hero-img.png);
-    background-size: cover;
-    width: 100%;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
+    max-width: 1920px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin: auto;
 }
 
 #hero_text-container {
     display: flex;
     flex-direction: column;
-    width: 1000px;
+    position:relative;
+    margin: auto;
 }
 
 #line {
