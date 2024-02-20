@@ -1,0 +1,45 @@
+Portfolio:
+
+- Link to CV
+- Link to GibHub
+- Hero (section)
+- Pitch / About me / skills(section)
+	1. Introduction:
+		- Who are you and what are you doing now?
+
+	2. 2-3 Paragraphs about you:
+		- Talk about your skills and what you bring to the table
+		- Relevant experience, have you worked with IT or SoMe before?
+		- Get personal, what do you do in your free time (Especially good if you can sneak in some transferable skills)?
+
+	3. Finish:
+		- End on a high note, try to show how enthusiastic you are.
+
+	Keep in mind:
+		- First impressions can be important and your pitch is often the first thing an employer will see.
+		Pitch is how you sell yourself to a potentional employer, steer away from negativity and insecurity.
+		Focus on how awesome you are!
+		- There is a sweet-spot when it comes to your pitch length. It should be readable in about 30 seconds, 
+		at least 2-4 informative paragraphs without any unnecessary fluff.
+
+- Previous projects (section)
+- Contact information (section)
+
+
+Ex.
+Hey! My name is Joe and I love creating things!
+I spent the last six months studying programming with Kodehode, a frontend focused course where I have gained lots of skills in HTML, CSS, JavaScript, React and Figma. Right now I'm looking for an internship where I'm excited to put all my new skills to use.
+
+In my previous job I ran their SoMe accounts and created lots of videos using Adobe Premier Pro. I'm ther type of person who loves working as part of a team and bouncing ideas off others until an amazing product comes out!
+
+In my free time I
+
+
+
+
+
+Meny: 
+- Forside
+- Om meg
+- Prosjekter
+- Kontakt

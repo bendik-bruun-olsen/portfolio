@@ -1,0 +1,118 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+
+:root {
+    --purewhite: #E3E3E3;
+    --fadedwhite: #B5B5B5;
+}
+
+body {
+height: 100vh;
+font-size: 16px;
+background-color: #1B2B5B;
+font-family: "Montserrat", sans-serif;
+text-shadow: 1px 1px black;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+header {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    background-color: #234679;
+    width: 1200px;
+
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1920px;
+    height: 60px;
+    background: linear-gradient(to bottom, #1F3066, #16234D);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#nav-list {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+}
+
+#nav-list a {
+    font-size: 18px;
+    color: var(--fadedwhite);
+    text-decoration: none;
+    user-select: none;
+    transition: color 0.2s ease-out;
+}
+
+#nav-list a:hover {
+    color: var(--purewhite);
+    transition: color 0.2s ease-out;
+}
+
+/* TEXT */
+h2 {
+    font-family: "Caveat", cursive;
+    font-size: 80px;
+    color: var(--purewhite);
+}
+
+#hero_text-container p {
+    color: var(--purewhite);
+    font-size: 24px;
+    max-width: 700px;
+    margin-left: 20px;
+}
+
+
+/* HERO */
+#hero {
+    background-image: url(./images/Hero-img.png);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero_text-container {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+}
+
+#line {
+    background: linear-gradient(to right, var(--purewhite), transparent);
+    height: 3px;
+    width: 100%;
+    position: relative;
+    top: -17px;
+    margin-left: 12px;
+}
+
+/* SECTION - ABOUT */
+#about {
+    height: 100vh;
+    border: 5px solid red;
+}
+
+#projects {
+    height: 100vh;
+    border: 5px solid yellow;
+}
