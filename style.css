@@ -75,6 +75,11 @@ h2 {
     margin-left: 20px;
 }
 
+#toolkit-text {
+    color: var(--purewhite);
+    text-align: center;
+}
+
 
 /* HERO */
 #hero {
@@ -114,4 +119,20 @@ h2 {
 #projects {
     height: 100vh;
     border: 5px solid yellow;
+}
+
+#toolkit-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#icons-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.icons {
+    max-height: 60px;
 }
