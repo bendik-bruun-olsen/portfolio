@@ -70,10 +70,11 @@ h2 {
 
 h3 {
     color: var(--purewhite);
+    margin-bottom: 8px;
 }
 
 .title-container {
-
+    margin-bottom: 20px;
 }
 
 #hero_text-container p {
@@ -81,6 +82,11 @@ h3 {
     font-size: 24px;
     max-width: 700px;
     margin-left: 20px;
+}
+
+#about_text-container p {
+    color: var(--purewhite);
+    margin-bottom: 10px;
 }
 
 #toolkit-title {
@@ -108,9 +114,12 @@ h3 {
 }
 
 #about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100vh;
-    border: 5px solid red;
     max-width: 100vw;
+    padding: 50px 100px;
 }
 
 #projects {
@@ -135,6 +144,16 @@ h3 {
 #about_text-container {
     display: flex;
     flex-direction: column;
+}
+
+#about_content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.paragraph-container {
+    margin-bottom: 10px;
 }
 
 #toolkit-container {
@@ -171,4 +190,10 @@ h3 {
 .toolkit-icons_img {
     max-height: 50px;
     object-fit: contain;
+}
+
+#portrait {
+    max-width: 400px;
+    object-fit: contain;
+    padding-top: 100px;
 }
