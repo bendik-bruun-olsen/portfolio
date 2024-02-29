@@ -12,11 +12,11 @@ scroll-behavior: smooth;
 }
 
 body {
-height: 100vh;
-font-size: 16px;
-background-color: #1B2B5B;
-font-family: "Montserrat", sans-serif;
-text-shadow: 1px 1px black;
+    height: 100vh;
+    font-size: 16px;
+    background-color: #1B2B5B;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 1px 1px black;
 }
 
 header {
@@ -26,8 +26,8 @@ header {
 
 main {
     background-color: #234679;
-    max-width: 1200px;
-    margin: auto;
+    max-width: 1440px;
+    margin: 0 auto;
 
 }
 
@@ -124,6 +124,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    min-height: 100vh;
 }
 
 #projects {
@@ -152,11 +153,16 @@ h3 {
     flex-direction: column;
 }
 
-.content-wrapper {
+.about_content-wrapper {
     display: flex;
     flex-direction: column;
     padding: 50px 100px;
-    gap: 50px;
+}
+
+.projects_content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
 }
 
 .content-container {
@@ -173,12 +179,14 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    margin-top: 100px;
 }
 
 #toolkit-icons_wrapper {
     display: flex;
     gap: 50px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .toolkit-icons_container {
@@ -203,11 +211,20 @@ h3 {
 
 .card-container {
     display: flex;
+    justify-content: flex-start;
     max-height: 200px;
-    max-width: 400px;
+    max-width: 550px;
     border: 1px solid red;
     gap: 20px;
-    padding: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+}
+
+.card-container:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-out;
 }
 
 /* SHAPES */
@@ -229,13 +246,10 @@ h3 {
 
 #portrait {
     max-width: 400px;
-    object-fit: contain;
     padding-top: 100px;
 }
 
 .project-image {
-    /*height: 300px;*/
-    max-width: 300px;
-    object-fit: contain;
-    overflow: hidden;
+    height: 100%;
+    max-height: 300px;
 }
