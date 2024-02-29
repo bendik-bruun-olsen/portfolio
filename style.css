@@ -8,6 +8,7 @@ scroll-behavior: smooth;
 :root {
     --purewhite: #E3E3E3;
     --fadedwhite: #B5B5B5;
+    --bright-gray: #C5C5C5;
 }
 
 body {
@@ -25,7 +26,7 @@ header {
 
 main {
     background-color: #234679;
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
 
 }
@@ -49,7 +50,7 @@ nav {
 }
 
 #nav-list a {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--fadedwhite);
     text-decoration: none;
     user-select: none;
@@ -64,17 +65,15 @@ nav {
 /* TEXT */
 h2 {
     font-family: "Caveat", cursive;
-    font-size: 80px;
+    font-size: 5rem;
     color: var(--purewhite);
+    padding-right: 100px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 h3 {
     color: var(--purewhite);
     margin-bottom: 8px;
-}
-
-.title-container {
-    margin-bottom: 20px;
 }
 
 #hero_text-container p {
@@ -84,20 +83,27 @@ h3 {
     margin-left: 20px;
 }
 
-#about_text-container p {
-    color: var(--purewhite);
+#text-container p {
+    color: var(--bright-gray);
     margin-bottom: 10px;
 }
 
 #toolkit-title {
     color: var(--purewhite);
     text-align: center;
+    user-select: none;
 }
 
 .toolkit-icons_text {
-    color: var(--purewhite);
+    color: var(--bright-gray);
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 400;
+    user-select: none;
+}
+
+.card-description {
+    font-size: 0.7rem;
+    color: var(--bright-gray);
 }
 
 /* SECTIONS */
@@ -117,13 +123,11 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    max-width: 100vw;
-    padding: 50px 100px;
+    gap: 50px;
 }
 
 #projects {
-    height: 100vh;
+    min-height: 100vh;
     border: 5px solid yellow;
 }
 
@@ -132,6 +136,8 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin-bottom: 20px;
+    width: fit-content;
 }
 
 #hero_text-container {
@@ -141,12 +147,19 @@ h3 {
     margin: auto;
 }
 
-#about_text-container {
+#text-container {
     display: flex;
     flex-direction: column;
 }
 
-#about_content-wrapper {
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+    gap: 50px;
+}
+
+.content-container {
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -159,12 +172,12 @@ h3 {
 #toolkit-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
 
 #toolkit-icons_wrapper {
     display: flex;
-    gap: 30px;
+    gap: 50px;
     justify-content: center;
 }
 
@@ -173,8 +186,29 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    transition: transform 0.3s ease-out;
 }
 
+.toolkit-icons_container:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-out;
+}
+
+#projects-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card-container {
+    display: flex;
+    max-height: 200px;
+    max-width: 400px;
+    border: 1px solid red;
+    gap: 20px;
+    padding: 20px;
+}
 
 /* SHAPES */
 .line {
@@ -183,12 +217,13 @@ h3 {
     width: 100%;
     position: relative;
     top: -17px;
-    margin-left: 12px;
+    margin-left: 5px;
+    border-radius: 20px;
 }
 
 /* IMAGES & ICONS */
 .toolkit-icons_img {
-    max-height: 50px;
+    max-height: 40px;
     object-fit: contain;
 }
 
@@ -196,4 +231,11 @@ h3 {
     max-width: 400px;
     object-fit: contain;
     padding-top: 100px;
+}
+
+.project-image {
+    /*height: 300px;*/
+    max-width: 300px;
+    object-fit: contain;
+    overflow: hidden;
 }
