@@ -246,6 +246,12 @@ h3 {
 }
 
 /* IMAGES & ICONS */
+#transition {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+}
+
 .toolkit-icons_img {
     max-height: 40px;
     object-fit: contain;
