@@ -83,9 +83,10 @@ h3 {
     margin-left: 20px;
 }
 
-#text-container p {
+#about_text-container p {
     color: var(--bright-gray);
     margin-bottom: 10px;
+    max-width: 60ch;
 }
 
 #toolkit-title {
@@ -148,7 +149,7 @@ h3 {
     margin: auto;
 }
 
-#text-container {
+#about_text-container {
     display: flex;
     flex-direction: column;
 }
@@ -173,6 +174,12 @@ h3 {
 
 .paragraph-container {
     margin-bottom: 10px;
+}
+
+#portrait-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 #toolkit-container {
@@ -245,8 +252,8 @@ h3 {
 }
 
 #portrait {
-    max-width: 400px;
-    padding-top: 100px;
+    max-height: 400px;
+    width: 100%;
 }
 
 .project-image {
