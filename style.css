@@ -22,6 +22,7 @@ body {
 header {
     height: 100%;
     width: 100%;
+    margin-bottom: 130px;
 }
 
 main {
@@ -118,6 +119,7 @@ h3 {
     display: flex;
     align-items: center;
     margin: auto;
+    position: relative;
 }
 
 #about {
@@ -154,18 +156,11 @@ h3 {
     flex-direction: column;
 }
 
-.about_content-wrapper {
+.content-wrapper {
     display: flex;
     flex-direction: column;
-    padding: 50px 100px;
+    padding: 80px 100px;
 }
-
-.projects_content-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding: 50px 100px;
-}
-
 .content-container {
     display: flex;
     flex-direction: row;
@@ -248,7 +243,10 @@ h3 {
 /* IMAGES & ICONS */
 #transition {
     position: absolute;
-    bottom: -100px;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1920px;
 }
 
 .toolkit-icons_img {
