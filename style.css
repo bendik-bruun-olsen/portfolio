@@ -48,6 +48,7 @@ nav {
     display: flex;
     list-style: none;
     gap: 50px;
+    position: relative;
 }
 
 #nav-list a {
@@ -60,6 +61,15 @@ nav {
 
 #nav-list a:hover {
     color: var(--purewhite);
+}
+
+
+#active-line {
+    position: absolute; 
+    height: 3px;
+    background-color: var(--purewhite);
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+    margin-top: 30px;
 }
 
 /* TEXT */

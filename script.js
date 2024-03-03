@@ -1,3 +1,5 @@
+const navItems = document.querySelectorAll("#nav-list a")
+const activeLine = document.querySelector("#active-line")
 const defaultImgSrc = "./images/img-placeholder.png"
 
 const projects = [
@@ -65,3 +67,18 @@ function generateProjectCards() {
 }
 
 generateProjectCards();
+
+
+updateActiveLine(navItems[0])
+
+function updateActiveLine(navItem) {
+    activeLine.style.width = `${navItem.offsetWidth}px`
+    activeLine.style.transform = `translateX(${navItem.offsetLeft}px)`
+}
+
+navItems.forEach(item => {
+    item.addEventListener("click", function() {
+        updateActiveLine(this);
+    })    
+});
+
