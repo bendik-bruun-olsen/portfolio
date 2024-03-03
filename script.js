@@ -68,17 +68,46 @@ function generateProjectCards() {
 
 generateProjectCards();
 
+let isScrolling = false;
 
-updateActiveLine(navItems[0])
+updateActiveNavItem("hero")
 
-function updateActiveLine(navItem) {
-    activeLine.style.width = `${navItem.offsetWidth}px`
-    activeLine.style.transform = `translateX(${navItem.offsetLeft}px)`
+function updateActiveNavItem(section) {
+    const navItem = document.querySelector(`a[href="#${section}"]`)
+    if (navItem) {
+        activeLine.style.width = `${navItem.offsetWidth}px`
+        activeLine.style.transform = `translateX(${navItem.offsetLeft}px)`
+    }
+    setTimeout(() => {
+        isScrolling = false;
+    }, 1000);
 }
 
 navItems.forEach(item => {
     item.addEventListener("click", function() {
-        updateActiveLine(this);
+        clicked = true;
+        const selectedSection = this.href.split("#")[1]
+        updateActiveNavItem(selectedSection);
     })    
 });
+
+
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    updateActiveNavItem(findNearestSection())
+});
+
+
+function findNearestSection() {
+    const scrollPos = window.scrollY;
+    let currentSection = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (scrollPos >= (sectionTop - sectionHeight / 2)) currentSection = section.id;
+    })     
+    return currentSection;
+}
 
