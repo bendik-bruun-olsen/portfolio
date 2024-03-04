@@ -1,6 +1,6 @@
-const navItems = document.querySelectorAll("#nav-list a")
-const activeLine = document.querySelector("#active-line")
-const defaultImgSrc = "./images/img-placeholder.png"
+const navItems = document.querySelectorAll("#nav-list a");
+const activeLine = document.querySelector("#active-line");
+const defaultImgSrc = "./images/img-placeholder.png";
 
 const projects = [
     {
@@ -71,35 +71,46 @@ generateProjectCards();
 let isScrolling = false;
 
 updateActiveNavItem("hero")
+handleScroll("hero");
 
 function updateActiveNavItem(section) {
-    const navItem = document.querySelector(`a[href="#${section}"]`)
+    const navItem = document.querySelector(`a[href="#${section}"]`);
     if (navItem) {
-        activeLine.style.width = `${navItem.offsetWidth}px`
-        activeLine.style.transform = `translateX(${navItem.offsetLeft}px)`
+        activeLine.style.width = `${navItem.offsetWidth}px`;
+        activeLine.style.transform = `translateX(${navItem.offsetLeft}px)`;
     }
+}
+
+function handleScroll(section) {
+    console.log(isScrolling)
+    const targetSection = document.querySelector(`#${section}`)
+    window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: "smooth"
+    })
     setTimeout(() => {
         isScrolling = false;
-    }, 1000);
+        console.log(isScrolling)
+    }, 600)
 }
 
 navItems.forEach(item => {
-    item.addEventListener("click", function() {
-        clicked = true;
-        const selectedSection = this.href.split("#")[1]
+    item.addEventListener("click", function(e) {
+        e.preventDefault();
+        isScrolling = true;
+        const selectedSection = this.getAttribute("href").substring(1);
         updateActiveNavItem(selectedSection);
-    })    
+        handleScroll(selectedSection);
+    })
 });
-
-
-const sections = document.querySelectorAll("section");
 
 window.addEventListener("scroll", () => {
-    updateActiveNavItem(findNearestSection())
+    if (!isScrolling) updateActiveNavItem(findNearestSection());
 });
 
-
 function findNearestSection() {
+    const sections = document.querySelectorAll("section");
+    console.log("findNearest");
     const scrollPos = window.scrollY;
     let currentSection = "";
 
@@ -107,7 +118,8 @@ function findNearestSection() {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         if (scrollPos >= (sectionTop - sectionHeight / 2)) currentSection = section.id;
-    })     
+    })
+    console.log(currentSection)
     return currentSection;
 }
 
