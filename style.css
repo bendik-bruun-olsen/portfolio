@@ -127,6 +127,14 @@ h3 {
     color: var(--bright-gray);
 }
 
+#contact label {
+    color: var(--pure-white);
+}
+
+.input-required {
+    color: red;
+}
+
 /* SECTIONS */
 #hero {
     background-image: url(./images/Hero-img.png);
@@ -154,7 +162,9 @@ h3 {
 
 #contact {
     background-color: #18214D;
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
 }
 /* CONTAINERS & WRAPPERS */
 .title-container {
@@ -249,6 +259,31 @@ h3 {
     transition: transform 0.3s ease-out;
 }
 
+#contact-form {
+    max-width: 500px;
+}
+
+#sender-details-wrapper {
+    display: flex;
+}
+
+#sender-name-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#sender-email-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#sender-message-container {
+    display: flex;
+    flex-direction: column;
+}
+
 /* SHAPES */
 .line {
     background: linear-gradient(to right, var(--pure-white), transparent);
@@ -282,4 +317,18 @@ h3 {
 .project-image {
     height: 100%;
     max-height: 300px;
+}
+
+/* INPUTS AND LABELS */
+#sender-name {
+
+}
+
+#sender-email {
+
+}
+
+#sender-message {
+    height: 150px;
+    max-width: 500px;
 }

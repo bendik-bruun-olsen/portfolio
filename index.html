@@ -119,7 +119,23 @@
     </main>
     <footer>
         <section id="contact">
-            sda
+            <form id="contact-form">
+                <div id="sender-details-wrapper">
+                    <div id="sender-name-container">
+                        <label for="sender-name">Navn <span class="input-required">*</span></label>
+                        <input type="text" id="sender-name" maxlength="100">
+                    </div>
+                    <div id="sender-email-container">
+                        <label for="sender-email">E-post <span class="input-required">*</span></label>
+                        <input type="text" id="sender-email" maxlength="100">
+                    </div>
+                </div>
+                <div id="sender-message-container">
+                    <label for="sender-message">Melding <span class="input-required">*</span></label>
+                    <textarea id="sender-message"></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
         </section>
     </footer>
 </body>
