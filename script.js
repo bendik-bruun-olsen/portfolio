@@ -42,7 +42,36 @@ const projects = [
 ]
 
 // Initialize
+generateProjectCards();
+let isScrolling = false;
+updateActiveNavItem("hero")
+handleScroll("hero");
 
+
+navItems.forEach(item => {
+    item.addEventListener("click", function(e) {
+        e.preventDefault();
+        isScrolling = true;
+        const selectedSection = this.getAttribute("href").substring(1);
+        updateActiveNavItem(selectedSection);
+        handleScroll(selectedSection);
+    })
+});
+
+window.addEventListener("scroll", () => {
+    if (!isScrolling) updateActiveNavItem(findNearestSection());
+});
+
+
+const pageHeight = () => {
+    return Math.max(
+        document.body.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.clientHeight,
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight
+        );
+}
 
 function generateProjectCards() {
     const projectsWrapper = document.querySelector("#projects-wrapper");
@@ -69,22 +98,6 @@ function generateProjectCards() {
     })
 }
 
-generateProjectCards();
-
-let isScrolling = false;
-
-const pageHeight = () => {
-    return Math.max(
-        document.body.scrollHeight,
-        document.body.offsetHeight,
-        document.documentElement.clientHeight,
-        document.documentElement.scrollHeight,
-        document.documentElement.offsetHeight
-        );
-}
-
-updateActiveNavItem("hero")
-handleScroll("hero");
 
 function updateActiveNavItem(sectionName) {
     const navItem = document.querySelector(`a[href="#${sectionName}"]`);
@@ -104,20 +117,6 @@ function handleScroll(sectionName) {
         isScrolling = false;
     }, 600)
 }
-
-navItems.forEach(item => {
-    item.addEventListener("click", function(e) {
-        e.preventDefault();
-        isScrolling = true;
-        const selectedSection = this.getAttribute("href").substring(1);
-        updateActiveNavItem(selectedSection);
-        handleScroll(selectedSection);
-    })
-});
-
-window.addEventListener("scroll", () => {
-    if (!isScrolling) updateActiveNavItem(findNearestSection());
-});
 
 function findNearestSection() {
     const sections = document.querySelectorAll("section");
