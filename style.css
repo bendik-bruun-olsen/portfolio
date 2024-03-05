@@ -5,8 +5,8 @@ box-sizing: border-box;
 }
 
 :root {
-    --purewhite: #E3E3E3;
-    --fadedwhite: #B5B5B5;
+    --pure-white: #E3E3E3;
+    --faded-white: #B5B5B5;
     --bright-gray: #C5C5C5;
 }
 
@@ -15,6 +15,9 @@ body {
     background-color: #1B2B5B;
     font-family: "Montserrat", sans-serif;
     text-shadow: 1px 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
@@ -24,10 +27,16 @@ header {
 }
 
 main {
-    background-color: #234679;
+    /* background-color: #234679; */
+    background: linear-gradient(to top, #18214D, #234679);
     max-width: 1440px;
-    margin: 0 auto;
+    width: 100%;
 
+}
+
+footer {
+    max-width: 1440px;
+    width: 100%;
 }
 
 /* NAVBAR */
@@ -51,44 +60,44 @@ nav {
 
 #nav-list a {
     font-size: 16px;
-    color: var(--fadedwhite);
+    color: var(--faded-white);
     text-decoration: none;
     user-select: none;
     padding: 15px 10px;
 }
 
 #nav-list a:hover {
-    color: var(--purewhite);
+    color: var(--pure-white);
 }
 
 #active-line {
     position: absolute; 
     height: 3px;
-    background-color: var(--purewhite);
+    background-color: var(--pure-white);
     transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
     margin-top: 30px;
 }
 
 .active-nav-item {
-    color: var(--purewhite);
+    color: var(--pure-white);
 }
 
 /* TEXT */
 h2 {
     font-family: "Caveat", cursive;
     font-size: 5rem;
-    color: var(--purewhite);
+    color: var(--pure-white);
     padding-right: 100px;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 h3 {
-    color: var(--purewhite);
+    color: var(--pure-white);
     margin-bottom: 8px;
 }
 
 #hero_text-container p {
-    color: var(--purewhite);
+    color: var(--pure-white);
     font-size: 24px;
     max-width: 700px;
     margin-left: 20px;
@@ -101,7 +110,7 @@ h3 {
 }
 
 #toolkit-title {
-    color: var(--purewhite);
+    color: var(--pure-white);
     text-align: center;
     user-select: none;
 }
@@ -145,7 +154,6 @@ h3 {
 
 #contact {
     background-color: #18214D;
-    width: 100vw;
     height: 500px;
 }
 /* CONTAINERS & WRAPPERS */
@@ -243,7 +251,7 @@ h3 {
 
 /* SHAPES */
 .line {
-    background: linear-gradient(to right, var(--purewhite), transparent);
+    background: linear-gradient(to right, var(--pure-white), transparent);
     height: 3px;
     width: 100%;
     position: relative;
