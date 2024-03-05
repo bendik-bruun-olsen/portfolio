@@ -134,17 +134,14 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    min-height: 100vh;
 }
 
-#projects {
-    min-height: 100vh;
-    border: 5px solid yellow;
-}
+/* #projects {
+} */
 
 #contact {
-    background-color: darkblue;
-    width: 100%;
+    background-color: #18214D;
+    width: 100vw;
     height: 500px;
 }
 /* CONTAINERS & WRAPPERS */
