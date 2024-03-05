@@ -41,6 +41,9 @@ const projects = [
     }
 ]
 
+// Initialize
+
+
 function generateProjectCards() {
     const projectsWrapper = document.querySelector("#projects-wrapper");
 
@@ -70,27 +73,35 @@ generateProjectCards();
 
 let isScrolling = false;
 
+const pageHeight = () => {
+    return Math.max(
+        document.body.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.clientHeight,
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight
+        );
+}
+
 updateActiveNavItem("hero")
 handleScroll("hero");
 
-function updateActiveNavItem(section) {
-    const navItem = document.querySelector(`a[href="#${section}"]`);
+function updateActiveNavItem(sectionName) {
+    const navItem = document.querySelector(`a[href="#${sectionName}"]`);
     if (navItem) {
         activeLine.style.width = `${navItem.offsetWidth}px`;
         activeLine.style.transform = `translateX(${navItem.offsetLeft}px)`;
     }
 }
 
-function handleScroll(section) {
-    console.log(isScrolling)
-    const targetSection = document.querySelector(`#${section}`)
+function handleScroll(sectionName) {
+    const targetSection = document.querySelector(`#${sectionName}`)
     window.scrollTo({
         top: targetSection.offsetTop,
         behavior: "smooth"
     })
     setTimeout(() => {
         isScrolling = false;
-        console.log(isScrolling)
     }, 600)
 }
 
@@ -110,16 +121,16 @@ window.addEventListener("scroll", () => {
 
 function findNearestSection() {
     const sections = document.querySelectorAll("section");
-    console.log("findNearest");
     const scrollPos = window.scrollY;
     let currentSection = "";
 
+    if (pageHeight() <= scrollPos + window.innerHeight) {
+        return "contact";
+    }
+
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        if (scrollPos >= (sectionTop - sectionHeight / 2)) currentSection = section.id;
-    })
-    console.log(currentSection)
+        if (scrollPos >= section.offsetTop - (window.innerHeight / 2)) currentSection = section.id;
+    });
+
     return currentSection;
 }
-
