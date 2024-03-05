@@ -98,9 +98,13 @@ function generateProjectCards() {
     })
 }
 
-
 function updateActiveNavItem(sectionName) {
     const navItem = document.querySelector(`a[href="#${sectionName}"]`);
+    navItems.forEach(item => { 
+        item.classList.remove("active-nav-item") 
+    })
+    navItem.classList.add("active-nav-item");
+    
     if (navItem) {
         activeLine.style.width = `${navItem.offsetWidth}px`;
         activeLine.style.transform = `translateX(${navItem.offsetLeft}px)`;

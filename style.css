@@ -69,6 +69,10 @@ nav {
     margin-top: 30px;
 }
 
+.active-nav-item {
+    color: var(--purewhite);
+}
+
 /* TEXT */
 h2 {
     font-family: "Caveat", cursive;
