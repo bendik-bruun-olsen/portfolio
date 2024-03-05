@@ -11,7 +11,6 @@ box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
     font-size: 16px;
     background-color: #1B2B5B;
     font-family: "Montserrat", sans-serif;
@@ -21,7 +20,7 @@ body {
 header {
     height: 100%;
     width: 100%;
-    margin-bottom: 130px;
+    margin-bottom: 100px;
 }
 
 main {
@@ -127,6 +126,7 @@ h3 {
     align-items: center;
     margin: auto;
     position: relative;
+    overflow-x: clip;
 }
 
 #about {
