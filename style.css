@@ -360,6 +360,12 @@ i {
 
 #github-icon {
     width: 40px;
+    transition: transform 0.2s ease-out;
+}
+
+#github-icon:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-out;
 }
 
 /* INPUTS AND LABELS */
