@@ -167,8 +167,9 @@ p {
     gap: 50px;
 }
 
-/* #projects {
-} */
+#projects {
+
+}
 
 #contact {
     background: linear-gradient(to bottom, #18214D, #131a3d);
@@ -183,7 +184,6 @@ p {
     flex-direction: column;
     gap: 5px;
     margin-bottom: 20px;
-    width: fit-content;
 }
 
 #hero_text-container {
@@ -335,7 +335,6 @@ p {
     max-height: 40px;
     object-fit: contain;
 }
-
 
 i {
     color: #b3c2da;
