@@ -23,7 +23,6 @@ body {
 header {
     height: 100%;
     width: 100%;
-    margin-bottom: 90px;
 }
 
 main {
@@ -161,21 +160,23 @@ p {
 }
 
 #about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
+    padding-top: 20px;
 }
 
-#projects {
+/* #projects {
 
-}
+} */
 
 #contact {
     background: linear-gradient(to bottom, #18214D, #131a3d);
     display: flex;
     justify-content: center;
     padding: 25px 0;
+}
+
+#filler {
+    height: 150px;
+    background: linear-gradient(to bottom, #25316e, transparent)
 }
 
 /* CONTAINERS & WRAPPERS */
@@ -201,7 +202,7 @@ p {
 .content-wrapper {
     display: flex;
     flex-direction: column;
-    padding: 70px 100px;
+    padding: 70px 150px;
 }
 .content-container {
     display: flex;
