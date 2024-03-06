@@ -64,6 +64,7 @@ nav {
     text-decoration: none;
     user-select: none;
     padding: 15px 10px;
+    white-space: nowrap;
 }
 
 #nav-list a:hover {
@@ -310,7 +311,9 @@ h3 {
 }
 
 #portrait {
-    max-height: 500px;
+    /* max-height: 500px; */
+    /* width: 100%; */
+    max-width: 400px;
     width: 100%;
     border-radius: 50%;
 }
@@ -332,4 +335,12 @@ h3 {
 #sender-message {
     height: 150px;
     max-width: 500px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+    .content-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 }

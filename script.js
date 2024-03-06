@@ -137,3 +137,7 @@ function findNearestSection() {
 
     return currentSection;
 }
+
+window.addEventListener("resize", () => {
+    console.log(window.innerWidth)
+})
