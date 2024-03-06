@@ -23,7 +23,7 @@ body {
 header {
     height: 100%;
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 90px;
 }
 
 main {
@@ -100,10 +100,6 @@ p {
     color: var(--faded-white);
 }
 
-i {
-    color: #b3c2da;
-}
-
 #hero_text-container p {
     color: var(--pure-white);
     font-size: 24px;
@@ -136,8 +132,17 @@ i {
     font-size: 0.7rem;
 }
 
-#contact h2 {
+#contact-info h2 {
     font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+#contact-info h3 {
+    font-size: 0.9rem;
+}
+
+#contact-info p {
+    font-size: 0.8rem;
 }
 
 /* SECTIONS */
@@ -169,7 +174,7 @@ i {
     background: linear-gradient(to bottom, #18214D, #131a3d);
     display: flex;
     justify-content: center;
-    padding: 50px 0;
+    padding: 25px 0;
 }
 
 /* CONTAINERS & WRAPPERS */
@@ -293,6 +298,19 @@ i {
     flex-direction: column;
 }
 
+.contact-details-container {
+    margin-bottom: 5px;
+}
+
+#contact-icons {
+    margin-top: 15px;
+}
+
+#contact-send-btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
 /* SHAPES */
 .line {
     background: linear-gradient(to right, var(--pure-white), transparent);
@@ -318,6 +336,12 @@ i {
     object-fit: contain;
 }
 
+
+i {
+    color: #b3c2da;
+    margin-left: 3px;
+}
+
 #portrait {
     /* max-height: 500px; */
     /* width: 100%; */
@@ -331,10 +355,15 @@ i {
     max-height: 300px;
 }
 
+#github-icon {
+    width: 40px;
+}
+
 /* INPUTS AND LABELS */
 #contact label {
     color: var(--pure-white);
-    margin-bottom: 5px;
+    margin-bottom: 3px;
+    font-size: 0.9rem;
 }
 
 .input-required {
@@ -344,19 +373,16 @@ i {
 #contact input[type="text"] {
     outline: none;
     padding: 3px;
+    border-radius: 5px;
+    background-color: var(--faded-white);
 }
 
 #contact textarea {
     outline: none;
     padding: 3px;
-}
-
-#sender-name {
-
-}
-
-#sender-email {
-
+    border-radius: 5px;
+    resize: none;
+    background-color: var(--faded-white);
 }
 
 #sender-message {
@@ -364,10 +390,34 @@ i {
     max-width: 500px;
 }
 
+/* BUTTONS */
+#contact-send-btn {
+    padding: 5px 10px;
+    background: linear-gradient(to top, var(--standard-blue), #305fa5);
+    color: var(--faded-white);
+    margin-top: 10px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    border: none;
+}
+
+#contact-send-btn:hover {
+    background: #305fa5;
+}
+
+#contact-send-btn:active {
+    background: #1c3863;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 1024px) {
     .content-container {
         flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #contact {
+        flex-direction: column;
         align-items: center;
     }
 }

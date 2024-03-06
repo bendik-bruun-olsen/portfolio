@@ -122,9 +122,16 @@
         <section id="contact">
             <div id="contact-info">
                 <h2>Kontakt meg</h2>
-                <div id="contact-email-container">
+                <div class="contact-details-container">
                     <h3>E-post:</h3>
                     <p>bendik08.kodehode@gmail.com</p>
+                </div>
+                <div class="contact-details-container">
+                    <h3>Telefon:</h3>
+                    <p>906 02 803</p>
+                </div>
+                <div id="contact-icons">
+                    <img id="github-icon" src="./images/icons/Github.png" alt="Github icon">
                 </div>
             </div>
             <form id="contact-form">
@@ -142,7 +149,9 @@
                     <label for="sender-message">Melding <span class="input-required">*</span></label>
                     <textarea id="sender-message"></textarea>
                 </div>
-                <button type="submit">Send</button>
+                <div id="contact-send-btn-container">
+                    <button id="contact-send-btn" type="submit">Send</button>
+                </div>
             </form>
         </section>
     </footer>
