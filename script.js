@@ -119,7 +119,7 @@ function handleScroll(sectionName) {
     })
     setTimeout(() => {
         isScrolling = false;
-    }, 600)
+    }, 1000)
 }
 
 function findNearestSection() {

@@ -6,8 +6,8 @@ box-sizing: border-box;
 
 :root {
     --pure-white: #E3E3E3;
-    --faded-white: #B5B5B5;
-    --bright-gray: #C5C5C5;
+    --faded-white: #d8d8d8;
+    --standard-blue: #234679;
 }
 
 body {
@@ -28,7 +28,7 @@ header {
 
 main {
     /* background-color: #234679; */
-    background: linear-gradient(to top, #18214D, #234679);
+    background: linear-gradient(to top, #18214D, var(--standard-blue));
     max-width: 1440px;
     width: 100%;
 
@@ -94,7 +94,14 @@ h2 {
 
 h3 {
     color: var(--pure-white);
-    margin-bottom: 8px;
+}
+
+p {
+    color: var(--faded-white);
+}
+
+i {
+    color: #b3c2da;
 }
 
 #hero_text-container p {
@@ -105,9 +112,12 @@ h3 {
 }
 
 #about_text-container p {
-    color: var(--bright-gray);
     margin-bottom: 10px;
     max-width: 60ch;
+}
+
+#about_text-container h3 {
+    margin-bottom: 8px;
 }
 
 #toolkit-title {
@@ -117,7 +127,6 @@ h3 {
 }
 
 .toolkit-icons_text {
-    color: var(--bright-gray);
     font-size: 0.8rem;
     font-weight: 400;
     user-select: none;
@@ -125,15 +134,10 @@ h3 {
 
 .card-description {
     font-size: 0.7rem;
-    color: var(--bright-gray);
 }
 
-#contact label {
-    color: var(--pure-white);
-}
-
-.input-required {
-    color: red;
+#contact h2 {
+    font-size: 2.5rem;
 }
 
 /* SECTIONS */
@@ -162,11 +166,12 @@ h3 {
 } */
 
 #contact {
-    background-color: #18214D;
+    background: linear-gradient(to bottom, #18214D, #131a3d);
     display: flex;
     justify-content: center;
-    padding: 100px 0;
+    padding: 50px 0;
 }
+
 /* CONTAINERS & WRAPPERS */
 .title-container {
     display: flex;
@@ -266,18 +271,21 @@ h3 {
 
 #sender-details-wrapper {
     display: flex;
+    margin-bottom: 10px;
 }
 
 #sender-name-container {
     display: flex;
     flex-direction: column;
     width: 50%;
+    padding-right: 20px;
 }
 
 #sender-email-container {
     display: flex;
     flex-direction: column;
     width: 50%;
+    padding-left: 20px;
 }
 
 #sender-message-container {
@@ -324,6 +332,25 @@ h3 {
 }
 
 /* INPUTS AND LABELS */
+#contact label {
+    color: var(--pure-white);
+    margin-bottom: 5px;
+}
+
+.input-required {
+    color: red;
+}
+
+#contact input[type="text"] {
+    outline: none;
+    padding: 3px;
+}
+
+#contact textarea {
+    outline: none;
+    padding: 3px;
+}
+
 #sender-name {
 
 }
