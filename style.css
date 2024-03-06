@@ -171,7 +171,7 @@ p {
     background: linear-gradient(to bottom, #18214D, #131a3d);
     display: flex;
     justify-content: center;
-    padding: 25px 0;
+    padding: 50px 0 25px 0;
 }
 
 #filler {
@@ -252,6 +252,7 @@ p {
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+    margin-top: 50px;
 }
 
 .card-container {
@@ -271,9 +272,9 @@ p {
     transition: transform 0.3s ease-out;
 }
 
-#contact-form {
+/* #contact-form {
     max-width: 500px;
-}
+} */
 
 #sender-details-wrapper {
     display: flex;
