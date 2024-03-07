@@ -139,6 +139,7 @@ p {
     padding: 5px;
     border-radius: 8px;
     font-size: 0.7rem;
+    user-select: none;
 }
 
 #contact-info h2 {
@@ -266,7 +267,6 @@ p {
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    margin-top: 50px;
 }
 
 .card-container {
@@ -278,7 +278,7 @@ p {
     padding: 15px;
     border-radius: 10px;
     transition: all 0.3s ease-out;
-    background-color: rgba(255, 255, 255, 0.02);
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
 .card-container:hover {
@@ -415,6 +415,8 @@ i {
 .card-source-icon:hover {
     opacity: 100%;
     cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.2s ease-out;
 }
 
 /* INPUTS AND LABELS */
