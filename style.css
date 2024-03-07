@@ -276,22 +276,32 @@ p {
     gap: 20px;
     padding: 15px;
     border-radius: 10px;
-    cursor: pointer;
     transition: all 0.3s ease-out;
-    /* background-color: rgba(255, 255, 255, 0.02) */
+    background-color: rgba(255, 255, 255, 0.02);
 }
 
 .card-container:hover {
     transform: scale(1.05);
     transition: all 0.3s ease-out;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.card-icons-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex: 1;
+    padding-left: 5px;
+}
+
+.card-source-container {
+    display: flex;
+    gap: 5px;
 }
 
 .card-language-container {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex: 1;
+    align-items: center;
     gap: 10px;
 }
 
@@ -394,6 +404,16 @@ i {
 #github-icon:hover {
     transform: scale(1.05);
     transition: transform 0.2s ease-out;
+}
+
+.card-source-icon {
+    height: 30px;
+    opacity: 80%;
+}
+
+.card-source-icon:hover {
+    opacity: 100%;
+    cursor: pointer;
 }
 
 /* INPUTS AND LABELS */

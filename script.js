@@ -69,7 +69,11 @@ function generateProjectCards() {
     const title = document.createElement("h3");
     const description = document.createElement("p");
     const image = document.createElement("img");
+    const iconsWrapper = document.createElement("div");
     const languageContainer = document.createElement("div");
+    const sourceContainer = document.createElement("div");
+    const githubIcon = document.createElement("img");
+    const webIcon = document.createElement("img");
 
     e.languages.forEach(lang => {
         const languageItem = document.createElement("p");
@@ -81,16 +85,24 @@ function generateProjectCards() {
     title.textContent = e.title;
     description.textContent = e.description;
     e.imageSrc.length ? image.src = e.imageSrc : image.src = defaultImgSrc;
+    githubIcon.src = "./images/icons/Github.png";
+    webIcon.src = "./images/icons/website.png";
 
     cardContainer.classList.add("card-container")
     textContainer.classList.add("projects_text-container");
     title.classList.add("card-title");
     description.classList.add("card-description");
     image.classList.add("project-image");
+    iconsWrapper.classList.add("card-icons-wrapper");
     languageContainer.classList.add("card-language-container");
+    sourceContainer.classList.add("card-source-container");
+    githubIcon.classList.add("card-source-icon");
+    webIcon.classList.add("card-source-icon");
 
-    textContainer.append(title, description)
-    cardContainer.append(image, textContainer, languageContainer);
+    textContainer.append(title, description);
+    sourceContainer.append(githubIcon, webIcon);
+    iconsWrapper.append(sourceContainer, languageContainer);
+    cardContainer.append(image, textContainer, iconsWrapper);
     projectsWrapper.append(cardContainer);
     })
 }
