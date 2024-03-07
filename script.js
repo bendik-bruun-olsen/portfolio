@@ -7,25 +7,33 @@ const projects = [
         title: "Freeplay Haven",
         description: "Finn spill som er gratis ved hjelp av API, med mulighet for sortering av kategorier, platformer, relevans, alfabetisk, popularitet og utgivelse dato. Inkluderer paginering.",
         image: "freeplay-haven.jpg",
-        languages: ["HTML", "CSS", "JavaScript"]
+        languages: ["HTML", "CSS", "JavaScript"],
+        github: "",
+        website: ""
     },
     {
         title: "CubeDash",
         description: "Et spill hvor man beveger en kube for å unngå fallende kuber. Inkluderer vanskelighets-grad, score og high-score.",
         image: "cubedash.jpg",
-        languages: ["HTML", "CSS", "JavaScript"]
+        languages: ["HTML", "CSS", "JavaScript"],
+        github: "",
+        website: ""
     },
     {
         title: "The Royal Edict of To-do's",
         description: "En oppgave liste hvor brukeren kan legge til oppgaver med en mulighet for manuell sortering, nummerering, avkrysning, skjuling og sletting av fullførte oppgaver.",
         image: "todo-list.jpg",
-        languages: ["HTML", "CSS", "JavaScript"]
+        languages: ["HTML", "CSS", "JavaScript"],
+        github: "",
+        website: ""
     },
     {
         title: "Drumkit",
         description: "Vestibulum interdum, dolor sit amet gravida pulvinar, ipsum massa mattis turpis, ut dictum ante tellus quis ex. Quisque aliquet non tellus sodales consequat. Cras sapien ipsum, luctus at scelerisque rutrum, luctus non dui. Maecenas vitae ex at nunc sodales scelerisque.",
         image: "drumkit.jpg",
-        languages: ["HTML", "CSS", "JavaScript"]
+        languages: ["HTML", "CSS", "JavaScript"],
+        github: "",
+        website: ""
     },
 ]
 

@@ -221,6 +221,7 @@ p {
 .content-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 50px;
 }
 
@@ -384,7 +385,7 @@ i {
 }
 
 #portrait {
-    max-width: 400px;
+    max-width: 350px;
     border-radius: 50%;
 }
 
