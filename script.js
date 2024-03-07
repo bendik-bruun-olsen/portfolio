@@ -4,41 +4,29 @@ const defaultImgSrc = "./images/img-placeholder.png";
 
 const projects = [
     {
-        title: "Lorem Ipsum",
-        description: "Vestibulum interdum, dolor sit amet gravida pulvinar, ipsum massa mattis turpis, ut dictum ante tellus quis ex. Quisque aliquet non tellus sodales consequat. Cras sapien ipsum, luctus at scelerisque rutrum, luctus non dui. Maecenas vitae ex at nunc sodales scelerisque.",
-        imageSrc: "",
-        languages: ["html", "css"]
+        title: "Freeplay Haven",
+        description: "Finn spill som er gratis ved hjelp av API, med mulighet for sortering av kategorier, platformer, relevans, alfabetisk, popularitet og utgivelse dato. Inkluderer paginering.",
+        imageSrc: "./images/project-images/freeplay-haven.jpg",
+        languages: ["html", "css", "javascript"]
     },
     {
-        title: "Lorem Ipsum",
-        description: "Vestibulum interdum, dolor sit amet gravida pulvinar, ipsum massa mattis turpis, ut dictum ante tellus quis ex. Quisque aliquet non tellus sodales consequat. Cras sapien ipsum, luctus at scelerisque rutrum, luctus non dui. Maecenas vitae ex at nunc sodales scelerisque.",
-        imageSrc: "",
-        languages: ["html", "css"]
+        title: "CubeDash",
+        description: "Et spill hvor man beveger en kube for å unngå fallende kuber. Inkluderer vanskelighets-grad, score og high-score.",
+        imageSrc: "./images/project-images/cubedash.jpg",
+        languages: ["html", "css", "javascript"]
     },
     {
-        title: "Lorem Ipsum",
-        description: "Vestibulum interdum, dolor sit amet gravida pulvinar, ipsum massa mattis turpis, ut dictum ante tellus quis ex. Quisque aliquet non tellus sodales consequat. Cras sapien ipsum, luctus at scelerisque rutrum, luctus non dui. Maecenas vitae ex at nunc sodales scelerisque.",
-        imageSrc: "",
-        languages: ["html", "css"]
+        title: "The Royal Edict of To-do's",
+        description: "En oppgave liste hvor brukeren kan legge til oppgaver med en mulighet for manuell sortering, nummerering, avkrysning, skjuling og sletting av fullførte oppgaver.",
+        imageSrc: "./images/project-images/todo-list.jpg",
+        languages: ["html", "css", "javascript"]
     },
     {
-        title: "Lorem Ipsum",
+        title: "Drumkit",
         description: "Vestibulum interdum, dolor sit amet gravida pulvinar, ipsum massa mattis turpis, ut dictum ante tellus quis ex. Quisque aliquet non tellus sodales consequat. Cras sapien ipsum, luctus at scelerisque rutrum, luctus non dui. Maecenas vitae ex at nunc sodales scelerisque.",
-        imageSrc: "",
-        languages: ["html", "css"]
+        imageSrc: "./images/project-images/drumkit.jpg",
+        languages: ["html", "css", "javascript"]
     },
-    {
-        title: "Lorem Ipsum",
-        description: "Vestibulum interdum, dolor sit amet gravida pulvinar, ipsum massa mattis turpis, ut dictum ante tellus quis ex. Quisque aliquet non tellus sodales consequat. Cras sapien ipsum, luctus at scelerisque rutrum, luctus non dui. Maecenas vitae ex at nunc sodales scelerisque.",
-        imageSrc: "",
-        languages: ["html", "css"]
-    },
-    {
-        title: "Lorem Ipsum",
-        description: "Vestibulum interdum, dolor sit amet gravida pulvinar, ipsum massa mattis turpis, ut dictum ante tellus quis ex. Quisque aliquet non tellus sodales consequat. Cras sapien ipsum, luctus at scelerisque rutrum, luctus non dui. Maecenas vitae ex at nunc sodales scelerisque.",
-        imageSrc: "",
-        languages: ["html", "css"]
-    }
 ]
 
 // Initialize
@@ -61,7 +49,6 @@ navItems.forEach(item => {
 window.addEventListener("scroll", () => {
     if (!isScrolling) updateActiveNavItem(findNearestSection());
 });
-
 
 const pageHeight = () => {
     return Math.max(
@@ -88,7 +75,8 @@ function generateProjectCards() {
     e.imageSrc.length ? image.src = e.imageSrc : image.src = defaultImgSrc;
 
     cardContainer.classList.add("card-container")
-    textContainer.classList.add("text-container");
+    textContainer.classList.add("projects_text-container");
+    title.classList.add("card-title");
     description.classList.add("card-description");
     image.classList.add("project-image");
 
@@ -137,7 +125,3 @@ function findNearestSection() {
 
     return currentSection;
 }
-
-window.addEventListener("resize", () => {
-    console.log(window.innerWidth)
-})

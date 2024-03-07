@@ -126,8 +126,12 @@ p {
     user-select: none;
 }
 
+.card-title {
+    margin-bottom: 5px;
+}
+
 .card-description {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 #contact-info h2 {
@@ -198,6 +202,10 @@ p {
     flex-direction: column;
 }
 
+.projects_text-container {
+    padding: 0 5px
+}
+
 .content-wrapper {
     display: flex;
     flex-direction: column;
@@ -256,18 +264,20 @@ p {
 .card-container {
     display: flex;
     flex-direction: column;
-    max-height: 800px;
+    height: 400px;
     max-width: 300px;
     gap: 20px;
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    /* background-color: rgba(255, 255, 255, 0.02) */
 }
 
 .card-container:hover {
     transform: scale(1.05);
-    transition: transform 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* #contact-form {
@@ -299,7 +309,7 @@ p {
 }
 
 .contact-details-container {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 #contact-icons {
@@ -354,8 +364,11 @@ i {
 }
 
 .project-image {
-    height: 100%;
-    max-height: 300px;
+    /* height: 100%; */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+
 }
 
 #github-icon {
