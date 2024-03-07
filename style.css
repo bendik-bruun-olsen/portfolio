@@ -108,6 +108,7 @@ p {
 #about_text-container p {
     margin-bottom: 10px;
     max-width: 60ch;
+    line-height: 20px;
 }
 
 #about_text-container h3 {
@@ -128,10 +129,12 @@ p {
 
 .card-title {
     margin-bottom: 5px;
+    user-select: none;
 }
 
 .card-description {
     font-size: 0.8rem;
+    user-select: none;
 }
 
 .card-language-item {
@@ -150,6 +153,20 @@ p {
 #contact-info h3 {
     font-size: 0.9rem;
 }
+
+#contact-details-title {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.contact-details-subtitle {
+    font-size: 0.9rem;
+}
+
+#contact-details-email {
+    text-decoration: underline;
+}
+
 
 #contact-info p {
     font-size: 0.8rem;
@@ -277,12 +294,12 @@ p {
     gap: 20px;
     padding: 15px;
     border-radius: 10px;
-    transition: all 0.3s ease-out;
+    transition: all 0.4s ease-out;
     background-color: rgba(255, 255, 255, 0.03);
 }
 
 .card-container:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     transition: all 0.3s ease-out;
     background-color: rgba(255, 255, 255, 0.07);
 }
@@ -391,7 +408,7 @@ i {
 
 .project-image {
     /* height: 100%; */
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     border-radius: 10px;
 
@@ -409,7 +426,7 @@ i {
 
 .card-source-icon {
     height: 30px;
-    opacity: 80%;
+    opacity: 60%;
 }
 
 .card-source-icon:hover {
