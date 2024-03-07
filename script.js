@@ -6,25 +6,25 @@ const projects = [
     {
         title: "Freeplay Haven",
         description: "Finn spill som er gratis ved hjelp av API, med mulighet for sortering av kategorier, platformer, relevans, alfabetisk, popularitet og utgivelse dato. Inkluderer paginering.",
-        imageSrc: "./images/project-images/freeplay-haven.jpg",
+        image: "freeplay-haven.jpg",
         languages: ["HTML", "CSS", "JavaScript"]
     },
     {
         title: "CubeDash",
         description: "Et spill hvor man beveger en kube for å unngå fallende kuber. Inkluderer vanskelighets-grad, score og high-score.",
-        imageSrc: "./images/project-images/cubedash.jpg",
+        image: "cubedash.jpg",
         languages: ["HTML", "CSS", "JavaScript"]
     },
     {
         title: "The Royal Edict of To-do's",
         description: "En oppgave liste hvor brukeren kan legge til oppgaver med en mulighet for manuell sortering, nummerering, avkrysning, skjuling og sletting av fullførte oppgaver.",
-        imageSrc: "./images/project-images/todo-list.jpg",
+        image: "todo-list.jpg",
         languages: ["HTML", "CSS", "JavaScript"]
     },
     {
         title: "Drumkit",
         description: "Vestibulum interdum, dolor sit amet gravida pulvinar, ipsum massa mattis turpis, ut dictum ante tellus quis ex. Quisque aliquet non tellus sodales consequat. Cras sapien ipsum, luctus at scelerisque rutrum, luctus non dui. Maecenas vitae ex at nunc sodales scelerisque.",
-        imageSrc: "./images/project-images/drumkit.jpg",
+        image: "drumkit.jpg",
         languages: ["HTML", "CSS", "JavaScript"]
     },
 ]
@@ -84,7 +84,10 @@ function generateProjectCards() {
 
     title.textContent = e.title;
     description.textContent = e.description;
-    e.imageSrc.length ? image.src = e.imageSrc : image.src = defaultImgSrc;
+    e.image.length ? 
+        image.src = `./images/project-images/${e.image}` : 
+        image.src = defaultImgSrc;
+
     githubIcon.src = "./images/icons/Github.png";
     webIcon.src = "./images/icons/website.png";
 
