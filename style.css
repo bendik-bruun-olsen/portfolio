@@ -357,6 +357,9 @@ p {
 
 #contact-icons {
     margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
 }
 
 #contact-send-btn-container {
@@ -404,6 +407,7 @@ i {
 #portrait {
     max-width: 350px;
     border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-image {
@@ -415,13 +419,31 @@ i {
 }
 
 #github-icon {
-    width: 40px;
+    height: 40px;
     transition: transform 0.2s ease-out;
 }
 
 #github-icon:hover {
     transform: scale(1.05);
     transition: transform 0.2s ease-out;
+}
+
+#cv-icon {
+    background-color: var(--pure-white);
+    font-size: 1.2rem;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+#cv-icon:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-out;
+    cursor: pointer;
 }
 
 .card-source-icon {
