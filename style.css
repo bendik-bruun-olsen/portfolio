@@ -165,6 +165,8 @@ p {
 
 #contact-details-email {
     text-decoration: underline;
+    color: var(--faded-white);
+    font-size: 0.8rem;
 }
 
 
@@ -199,7 +201,7 @@ p {
     background: linear-gradient(to bottom, #18214D, #131a3d);
     display: flex;
     justify-content: center;
-    padding: 40px 0 25px 0;
+    padding: 35px 0 25px 0;
 }
 
 #filler {
@@ -212,7 +214,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 #hero_text-container {
@@ -299,8 +301,8 @@ p {
 }
 
 .card-container:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease-out;
+    transform: scale(1.05);
+    transition: all 0.2s ease-out;
     background-color: rgba(255, 255, 255, 0.07);
 }
 
@@ -323,9 +325,9 @@ p {
     gap: 10px;
 }
 
-/* #contact-form {
-    max-width: 500px;
-} */
+#contact-form {
+    padding-top: 10px;
+}
 
 #sender-details-wrapper {
     display: flex;
@@ -352,14 +354,18 @@ p {
 }
 
 .contact-details-container {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-#contact-icons {
+.contact-icons {
     margin-top: 15px;
     display: flex;
     align-items: center;
     gap: 10px; 
+}
+
+#hero .contact-icons {
+    margin-left: 20px;
 }
 
 #contact-send-btn-container {
@@ -418,32 +424,16 @@ i {
 
 }
 
-#github-icon {
+.connect-icon {
     height: 40px;
     transition: transform 0.2s ease-out;
+    opacity: 80%;
 }
 
-#github-icon:hover {
+.connect-icon:hover {
     transform: scale(1.05);
     transition: transform 0.2s ease-out;
-}
-
-#cv-icon {
-    background-color: var(--pure-white);
-    font-size: 1.2rem;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-}
-
-#cv-icon:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease-out;
-    cursor: pointer;
+    opacity: 100%;
 }
 
 .card-source-icon {
@@ -474,6 +464,7 @@ i {
     padding: 3px;
     border-radius: 5px;
     background-color: var(--faded-white);
+    border: none;
 }
 
 #contact textarea {
@@ -482,6 +473,7 @@ i {
     border-radius: 5px;
     resize: none;
     background-color: var(--faded-white);
+    border: none;
 }
 
 #sender-message {

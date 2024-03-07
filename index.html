@@ -10,9 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2728954237.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js" defer></script>
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./style.css">
-    <title>Portfolio - Bendik BO</title>
+    <title>Portfolio - Bendik Bruun-Olsen</title>
 </head>
 <body>
     <header>
@@ -33,6 +34,10 @@
                 </div>
                 <p>Mitt navn er <b>Bendik Bruun-Olsen;</b></p>
                 <p>Jeg er en ivrig utvikler med et øye for <b>detaljer</b> og kjærlighet for <b>problemløsning</b>.</p>
+                <div class="contact-icons">
+                    <a href="https://github.com/bendik-kodehode" target="_blank"><img class="connect-icon" src="./images/icons/Github.png" alt="Github icon"></a>
+                    <a><img class="connect-icon" src="./images/icons/cv-icon.png" alt="CV icon"></a>
+                </div>
             </div>
             <img id="transition" src="./images/transition.svg" alt="Transition Image">
         </section>
@@ -126,12 +131,12 @@
                 <h2 id="contact-details-subtitle">Kontakt meg</h2>
                 <div class="contact-details-container">
                     <h3 class="contact-details-subtitle">E-post:</h3>
-                    <p id="contact-details-email">bendik08.kodehode@gmail.com</p>
+                    <a id="contact-details-email" class="mailtoui" href="mailto:bendik08.kodehode@gmail.com">bendik08.kodehode@gmail.com</a>
                 </div>
                 <p>Eller send meg en melding her <i class="fas fa-arrow-right"></i></p>
-                <div id="contact-icons">
-                    <a href="https://github.com/bendik-kodehode" target="_blank"><img id="github-icon" src="./images/icons/Github.png" alt="Github icon"></a>
-                    <a id="cv-icon">CV</a>
+                <div class="contact-icons">
+                    <a href="https://github.com/bendik-kodehode" target="_blank"><img class="connect-icon" src="./images/icons/Github.png" alt="Github icon"></a>
+                    <a><img class="connect-icon" src="./images/icons/cv-icon.png" alt="CV icon"></a>
                 </div>
             </div>
             <form id="contact-form">
