@@ -389,6 +389,7 @@ p {
 #contact-send-btn-container {
     display: flex;
     justify-content: flex-end;
+    
 }
 
 /* SHAPES */
@@ -506,12 +507,12 @@ i {
     color: var(--faded-white);
     margin-top: 10px;
     font-size: 0.9rem;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
 }
 
 #contact-send-btn:hover {
-    background: #305fa5;
+    background: #254980;
 }
 
 #contact-send-btn:active {
