@@ -102,7 +102,7 @@ p {
     color: var(--pure-white);
     font-size: 24px;
     max-width: 700px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 #about_text-container p {
@@ -169,6 +169,10 @@ p {
     font-size: 0.8rem;
 }
 
+#contact-details-email:hover {
+    color: var(--pure-white);
+}
+
 
 #contact-info p {
     font-size: 0.8rem;
@@ -184,6 +188,7 @@ p {
     max-width: 1920px;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: auto;
     position: relative;
     overflow-x: clip;
@@ -221,7 +226,6 @@ p {
     display: flex;
     flex-direction: column;
     position:relative;
-    margin: auto;
 }
 
 #about_text-container {
@@ -301,7 +305,6 @@ p {
 }
 
 .card-container:hover {
-    transform: scale(1.05);
     transition: all 0.2s ease-out;
     background-color: rgba(255, 255, 255, 0.07);
 }
@@ -365,7 +368,7 @@ p {
 }
 
 #hero .contact-icons {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 #contact-send-btn-container {
