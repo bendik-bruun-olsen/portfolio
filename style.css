@@ -370,7 +370,9 @@ p {
 }
 
 .contact-details-container {
-    margin-bottom: 20px;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
 }
 
 .connect-icons {
@@ -534,6 +536,7 @@ i {
     #contact-info {
         flex-direction: row;
         justify-content: space-between;
+        margin-bottom: 10px;
     }
 
     .connect-icons {
