@@ -1,6 +1,6 @@
 const navItems = document.querySelectorAll("#nav-list a");
 const activeLine = document.querySelector("#active-line");
-const defaultImgSrc = "./images/img-placeholder.png";
+const defaultImage = "./images/img-placeholder.png";
 
 const projects = [
     {
@@ -58,6 +58,7 @@ window.addEventListener("scroll", () => {
     if (!isScrolling) updateActiveNavItem(findNearestSection());
 });
 
+// Find the proper page height (Since it might differ on different browsers)
 const pageHeight = () => {
     return Math.max(
         document.body.scrollHeight,
@@ -94,7 +95,7 @@ function generateProjectCards() {
     description.textContent = e.description;
     e.image.length ? 
         image.src = `./images/project-images/${e.image}` : 
-        image.src = defaultImgSrc;
+        image.src = defaultImage;
 
     githubIcon.src = "./images/icons/Github.png";
     webIcon.src = "./images/icons/website.png";
@@ -147,7 +148,8 @@ function findNearestSection() {
     const scrollPos = window.scrollY;
     let currentSection = "";
 
-    if (pageHeight() <= scrollPos + window.innerHeight) {
+    // If at bottom of page
+    if (pageHeight() <= scrollPos - pageHeight()) {
         return "contact";
     }
 
@@ -156,4 +158,27 @@ function findNearestSection() {
     });
 
     return currentSection;
+}
+
+console.log(window.innerWidth);
+
+handleArrowDirection();
+
+window.addEventListener("resize", () => {
+    switchArrowDirection();
+    console.log("handle");
+})
+
+function switchArrowDirection() {
+    const arrow = document.querySelector("#contact-arrow");
+
+    if (window.innerWidth < 1024) {
+        arrow.classList.remove("fa-arrow-right");
+        arrow.classList.add("fa-arrow-down");
+        console.log("if");
+    } else {
+        arrow.classList.remove("fa-arrow-down");
+        arrow.classList.add("fa-arrow-right");
+        console.log("else");
+    }
 }

@@ -278,11 +278,13 @@ p {
     align-items: center;
     gap: 10px;
     transition: transform 0.3s ease-out;
+    opacity: 90%;
 }
 
 .toolkit-icons_container:hover {
     transform: scale(1.2);
-    transition: transform 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    opacity: 100%;
 }
 
 #projects-wrapper {
