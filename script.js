@@ -1,6 +1,7 @@
 const navItems = document.querySelectorAll("#nav-list a");
 const activeLine = document.querySelector("#active-line");
 const defaultImage = "./images/img-placeholder.png";
+let isScrolling = false;
 
 const projects = [
     {
@@ -37,33 +38,19 @@ const projects = [
     },
 ]
 
-// Initialize
-generateProjectCards();
-let isScrolling = false;
-updateActiveNavItem("hero")
-// handleScroll("hero");
-decideArrowDirection();
-
-
-navItems.forEach(item => {
-    item.addEventListener("click", function(e) {
-        e.preventDefault();
-        isScrolling = true;
-        const selectedSection = this.getAttribute("href").substring(1);
-        updateActiveNavItem(selectedSection);
-        handleScroll(selectedSection);
-    })
-});
-
-window.addEventListener("scroll", () => {
-    if (!isScrolling) updateActiveNavItem(findNearestSection());
-});
-
 window.addEventListener("resize", () => {
     decideArrowDirection();
 })
 
-// Find the proper page height (Since it might differ on different browsers)
+const initialize = () => {
+    generateProjectCards();
+    updateActiveNavItem("hero")
+    // handleScroll("hero");
+    decideArrowDirection();
+}
+initialize();
+
+// Find the proper page height (Due to inconsistency across different browsers)
 const pageHeight = () => {
     return Math.max(
         document.body.scrollHeight,
@@ -124,6 +111,20 @@ function generateProjectCards() {
     })
 }
 
+navItems.forEach(item => {
+    item.addEventListener("click", function(e) {
+        e.preventDefault();
+        isScrolling = true;
+        const selectedSection = this.getAttribute("href").substring(1);
+        updateActiveNavItem(selectedSection);
+        handleScroll(selectedSection);
+    })
+});
+
+window.addEventListener("scroll", () => {
+    if (!isScrolling) updateActiveNavItem(findNearestSection());
+});
+
 function updateActiveNavItem(sectionName) {
     const navItem = document.querySelector(`a[href="#${sectionName}"]`);
     navItems.forEach(item => { 
@@ -154,9 +155,7 @@ function findNearestSection() {
     let currentSection = "";
 
     // If at bottom of page
-    if (pageHeight() <= scrollPos - pageHeight()) {
-        return "contact";
-    }
+    if (pageHeight() <= scrollPos + window.innerHeight) return "contact";
 
     sections.forEach(section => {
         if (scrollPos >= section.offsetTop - (window.innerHeight / 2)) currentSection = section.id;
