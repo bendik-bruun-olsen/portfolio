@@ -42,6 +42,7 @@ generateProjectCards();
 let isScrolling = false;
 updateActiveNavItem("hero")
 // handleScroll("hero");
+decideArrowDirection();
 
 
 navItems.forEach(item => {
@@ -57,6 +58,10 @@ navItems.forEach(item => {
 window.addEventListener("scroll", () => {
     if (!isScrolling) updateActiveNavItem(findNearestSection());
 });
+
+window.addEventListener("resize", () => {
+    decideArrowDirection();
+})
 
 // Find the proper page height (Since it might differ on different browsers)
 const pageHeight = () => {
@@ -160,25 +165,15 @@ function findNearestSection() {
     return currentSection;
 }
 
-console.log(window.innerWidth);
-
-handleArrowDirection();
-
-window.addEventListener("resize", () => {
-    switchArrowDirection();
-    console.log("handle");
-})
-
-function switchArrowDirection() {
+function decideArrowDirection() {
+    // Changes the arrow orientation in contact section
     const arrow = document.querySelector("#contact-arrow");
 
     if (window.innerWidth < 1024) {
         arrow.classList.remove("fa-arrow-right");
         arrow.classList.add("fa-arrow-down");
-        console.log("if");
     } else {
         arrow.classList.remove("fa-arrow-down");
         arrow.classList.add("fa-arrow-right");
-        console.log("else");
     }
 }

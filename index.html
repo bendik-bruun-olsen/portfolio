@@ -34,7 +34,7 @@
                 </div>
                 <p>Mitt navn er <b>Bendik Bruun-Olsen;</b></p>
                 <p>Jeg er en ivrig utvikler med et øye for <b>detaljer</b> og kjærlighet for <b>problemløsning</b>.</p>
-                <div class="contact-icons">
+                <div class="connect-icons">
                     <a href="https://github.com/bendik-kodehode" target="_blank"><img class="connect-icon" src="./images/icons/Github.png" alt="Github icon"></a>
                     <a><img class="connect-icon" src="./images/icons/cv-icon.png" alt="CV icon"></a>
                 </div>
@@ -50,7 +50,7 @@
                     <h2>Om meg</h2>
                     <div class="title-line"></div>
                 </div>
-                <div class="content-container">
+                <div id="about_content-container">
                     <div id="about_text-container">
                         <div class="paragraph-container">
                             <h3>Hvem er jeg? <i class="fas fa-user"></i></h3>
@@ -134,37 +134,41 @@
     <footer>
         <div class="contact-line"></div>
         <section id="contact">
-            <div id="contact-info">
-                <h2 id="contact-details-subtitle">Kontakt meg</h2>
-                <div class="contact-details-container">
-                    <h3 class="contact-details-subtitle">E-post:</h3>
-                    <a id="contact-details-email" class="mailtoui" href="mailto:bendik08.kodehode@gmail.com">bendik08.kodehode@gmail.com</a>
+            <div id="contact_content-wrapper">
+                <div id="contact-info">
+                    <div id="contact_text-container">
+                        <h2 id="contact-details-subtitle">Kontakt meg</h2>
+                        <div class="contact-details-container">
+                            <h3 class="contact-details-subtitle">E-post:</h3>
+                            <a id="contact-details-email" class="mailtoui" href="mailto:bendik08.kodehode@gmail.com">bendik08.kodehode@gmail.com</a>
+                        </div>
+                        <p>Eller send meg en melding her <i id="contact-arrow" class="fas fa-arrow-right"></i></p>
+                    </div>
+                    <div class="connect-icons">
+                        <a href="https://github.com/bendik-kodehode" target="_blank"><img class="connect-icon" src="./images/icons/Github.png" alt="Github icon"></a>
+                        <a><img class="connect-icon" src="./images/icons/cv-icon.png" alt="CV icon"></a>
+                    </div>
                 </div>
-                <p>Eller send meg en melding her <i id="contact-arrow" class="fas fa-arrow-right"></i></p>
-                <div class="contact-icons">
-                    <a href="https://github.com/bendik-kodehode" target="_blank"><img class="connect-icon" src="./images/icons/Github.png" alt="Github icon"></a>
-                    <a><img class="connect-icon" src="./images/icons/cv-icon.png" alt="CV icon"></a>
-                </div>
+                <form id="contact-form">
+                    <div id="sender-details-wrapper">
+                        <div id="sender-name-container">
+                            <label for="sender-name">Navn <span class="input-required">*</span></label>
+                            <input type="text" id="sender-name" maxlength="100">
+                        </div>
+                        <div id="sender-email-container">
+                            <label for="sender-email">E-post <span class="input-required">*</span></label>
+                            <input type="text" id="sender-email" maxlength="100">
+                        </div>
+                    </div>
+                    <div id="sender-message-container">
+                        <label for="sender-message">Melding <span class="input-required">*</span></label>
+                        <textarea id="sender-message"></textarea>
+                    </div>
+                    <div id="contact-send-btn-container">
+                        <button id="contact-send-btn" type="submit">Send</button>
+                    </div>
+                </form>
             </div>
-            <form id="contact-form">
-                <div id="sender-details-wrapper">
-                    <div id="sender-name-container">
-                        <label for="sender-name">Navn <span class="input-required">*</span></label>
-                        <input type="text" id="sender-name" maxlength="100">
-                    </div>
-                    <div id="sender-email-container">
-                        <label for="sender-email">E-post <span class="input-required">*</span></label>
-                        <input type="text" id="sender-email" maxlength="100">
-                    </div>
-                </div>
-                <div id="sender-message-container">
-                    <label for="sender-message">Melding <span class="input-required">*</span></label>
-                    <textarea id="sender-message"></textarea>
-                </div>
-                <div id="contact-send-btn-container">
-                    <button id="contact-send-btn" type="submit">Send</button>
-                </div>
-            </form>
         </section>
     </footer>
 </body>
