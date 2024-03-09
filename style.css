@@ -464,7 +464,12 @@ i {
     opacity: 100%;
     cursor: pointer;
     transform: scale(1.05);
-    transition: all 0.2s ease-out;
+}
+
+.card-source-icon:active {
+    opacity: 80%;
+    transform: scale(1);
+    transition: none;
 }
 
 /* INPUTS AND LABELS */
