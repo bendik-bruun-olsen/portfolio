@@ -9,32 +9,32 @@ const projects = [
         description: "Finn spill som er gratis ved hjelp av API, med mulighet for sortering av kategorier, platformer, relevans, alfabetisk, popularitet og utgivelse dato. Inkluderer paginering.",
         image: "freeplay-haven.jpg",
         languages: ["HTML", "CSS", "JavaScript"],
-        github: "",
-        website: ""
+        githubLink: "https://github.com/bendik-kodehode/Freeplay_Haven",
+        websiteLink: "https://bendik-kodehode.github.io/Freeplay_Haven/"
     },
     {
         title: "CubeDash",
         description: "Et spill hvor man beveger en kube for å unngå fallende kuber. Inkluderer vanskelighets-grad, score og high-score.",
         image: "cubedash.jpg",
         languages: ["HTML", "CSS", "JavaScript"],
-        github: "",
-        website: ""
+        githubLink: "https://github.com/bendik-kodehode/Cubedash",
+        websiteLink: "https://bendik-kodehode.github.io/Cubedash/"
     },
     {
         title: "The Royal Edict of To-do's",
         description: "En oppgave liste hvor brukeren kan legge til oppgaver med en mulighet for manuell sortering, nummerering, avkrysning, skjuling og sletting av fullførte oppgaver.",
         image: "todo-list.jpg",
         languages: ["HTML", "CSS", "JavaScript"],
-        github: "",
-        website: ""
+        githubLink: "https://github.com/bendik-kodehode/The_Royal_Edict_of_To-dos",
+        websiteLink: "https://bendik-kodehode.github.io/The_Royal_Edict_of_To-dos/"
     },
     {
         title: "Drumkit",
         description: "Vestibulum interdum, dolor sit amet gravida pulvinar, ipsum massa mattis turpis, ut dictum ante tellus quis ex. Quisque aliquet non tellus sodales consequat.",
         image: "drumkit.jpg",
         languages: ["HTML", "CSS", "JavaScript"],
-        github: "",
-        website: ""
+        githubLink: "https://github.com/bendik-kodehode/Drumkit",
+        websiteLink: "https://bendik-kodehode.github.io/Drumkit/"
     },
 ]
 
@@ -74,7 +74,9 @@ function generateProjectCards() {
     const languageContainer = document.createElement("div");
     const sourceContainer = document.createElement("div");
     const githubIcon = document.createElement("img");
-    const webIcon = document.createElement("img");
+    const githubAnchor = document.createElement("a");
+    const websiteIcon = document.createElement("img");
+    const websiteAnchor = document.createElement("a");
 
     e.languages.forEach(lang => {
         const languageItem = document.createElement("p");
@@ -90,7 +92,11 @@ function generateProjectCards() {
         image.src = defaultImage;
 
     githubIcon.src = "./images/icons/Github.png";
-    webIcon.src = "./images/icons/website.png";
+    websiteIcon.src = "./images/icons/website.png";
+    githubAnchor.href = e.githubLink;
+    websiteAnchor.href = e.websiteLink;
+    githubAnchor.target = "_blank";
+    websiteAnchor.target = "_blank";
 
     cardContainer.classList.add("card-container")
     textContainer.classList.add("projects_text-container");
@@ -101,10 +107,12 @@ function generateProjectCards() {
     languageContainer.classList.add("card-language-container");
     sourceContainer.classList.add("card-source-container");
     githubIcon.classList.add("card-source-icon");
-    webIcon.classList.add("card-source-icon");
+    websiteIcon.classList.add("card-source-icon");
 
     textContainer.append(title, description);
-    sourceContainer.append(githubIcon, webIcon);
+    githubAnchor.append(githubIcon);
+    websiteAnchor.append(websiteIcon);
+    sourceContainer.append(githubAnchor, websiteAnchor);
     iconsWrapper.append(sourceContainer, languageContainer);
     cardContainer.append(image, textContainer, iconsWrapper);
     projectsWrapper.append(cardContainer);
