@@ -293,7 +293,7 @@ p {
 }
 
 .toolkit-icons_container:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: all 0.3s ease-out;
     opacity: 100%;
 }
@@ -314,12 +314,13 @@ p {
     padding: 15px;
     border-radius: 10px;
     transition: all 0.4s ease-out;
-    background-color: rgba(255, 255, 255, 0.03);
+    /* background-color: rgba(255, 255, 255, 0.03); */
 }
 
 .card-container:hover {
-    transition: all 0.2s ease-out;
+    transition: all 0.2s ease-in;
     background-color: rgba(255, 255, 255, 0.07);
+    transform: scale(1.05);
 }
 
 .card-icons-wrapper {
