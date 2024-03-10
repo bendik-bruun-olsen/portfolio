@@ -121,6 +121,10 @@ p {
     user-select: none;
 }
 
+.toolkit-icons_link {
+    text-decoration: none;
+}
+
 .toolkit-icons_text {
     font-size: 0.8rem;
     font-weight: 400;
