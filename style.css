@@ -596,6 +596,10 @@ i {
         height: 2px;
     }
 
+    #hero {
+        padding: 0 50px;
+    }
+
     .content-wrapper {
         padding: 50px 70px;
     }
@@ -608,6 +612,10 @@ i {
 
     #nav-list {
         gap: 20px;
+    }
+
+    #hero {
+        padding: 0 20px;
     }
 
     .content-wrapper {
