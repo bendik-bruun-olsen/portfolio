@@ -89,7 +89,7 @@ h1 {
     color: var(--pure-white);
     padding-right: 100px;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
-    font-size: clamp(4rem, 10vw, 6rem);
+    font-size: clamp(4rem, 10vw, 5rem);
     position: relative;
 }
 
@@ -106,6 +106,7 @@ h1::after {
 h2 {
     color: var(--pure-white);
     font-size: 1.3rem;
+    margin-bottom: 10px;
 }
 
 h3 {
@@ -124,17 +125,13 @@ p {
     color: var(--pure-white);
     font-size: 1.2rem;
     max-width: 700px;
-    margin-left: 10px;
+    margin: 0 0 5px 10px;
 }
 
 #about_text-container p {
     margin-bottom: 10px;
     max-width: 60ch;
     line-height: 20px;
-}
-
-#about_text-container h2 {
-    margin-bottom: 8px;
 }
 
 #toolkit-title {
@@ -416,6 +413,7 @@ p {
 }
 
 #hero .connect-icons {
+    margin-top: 10px;
     margin-left: 10px;
 }
 
