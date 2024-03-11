@@ -495,6 +495,7 @@ i {
     border-radius: 5px;
     background-color: var(--faded-white);
     border: none;
+    font-family: "Montserrat", sans-serif;;
 }
 
 #contact textarea {
@@ -504,6 +505,7 @@ i {
     resize: none;
     background-color: var(--faded-white);
     border: none;
+    font-family: "Montserrat", sans-serif;
 }
 
 #sender-message {
@@ -523,11 +525,11 @@ i {
 }
 
 #contact-send-btn:hover {
-    background: #254980;
+    background: linear-gradient(to top, #2c5797, #3469b9)
 }
 
 #contact-send-btn:active {
-    background: #1c3863;
+    background: linear-gradient(to top, #20406e, #28518d)
 }
 
 /* MEDIA QUERIES */
