@@ -61,7 +61,7 @@ nav {
 }
 
 #nav-list a {
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--faded-white);
     text-decoration: none;
     user-select: none;
@@ -147,7 +147,7 @@ p {
 }
 
 .toolkit-icons_text {
-    font-size: 0.8rem;
+    font-size: 14px;
     font-weight: 400;
     user-select: none;
 }
@@ -335,7 +335,7 @@ p {
 .card-container {
     display: flex;
     flex-direction: column;
-    height: 400px;
+    /* min-height: 400px; */
     max-width: 300px;
     gap: 20px;
     padding: 15px;
@@ -588,19 +588,12 @@ i {
 }
 
 @media (max-width: 768px) {
-    html {
-        font-size: 14px;
+    #nav-list {
+        gap: 40px;
     }
 
-    /* #nav-list {
-        gap: 0;
-        justify-content: space-evenly;
-        width: 100%;
-    } */
-
-    #nav-list a {
-        padding: 15px 0;
-        font-size: 0.8rem;
+    #active-line {
+        height: 2px;
     }
 
     .content-wrapper {
@@ -609,15 +602,31 @@ i {
 }
 
 @media (max-width: 425px) {
+    html {
+        font-size: 14px;
+    }
+
+    #nav-list {
+        gap: 20px;
+    }
+
     .content-wrapper {
         padding: 50px 30px;
     }
 
-    html {
-        font-size: 12px;
-    }
-
     #contact-form {
         width: 275px;
+    }
+}
+
+@media (max-width: 375px) {
+    #nav-list {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    #nav-list a {
+        font-size: 0.8rem;
     }
 }
