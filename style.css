@@ -10,6 +10,10 @@ box-sizing: border-box;
     --standard-blue: #234679;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     font-size: 16px;
     background-color: #1B2B5B;
@@ -87,7 +91,6 @@ h1 {
     font-family: "Caveat", cursive;
     font-size: 5rem;
     color: var(--pure-white);
-    padding-right: 100px;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
     font-size: clamp(4rem, 10vw, 5rem);
     position: relative;
@@ -105,7 +108,7 @@ h1::after {
 
 h2 {
     color: var(--pure-white);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
@@ -451,7 +454,7 @@ p {
 }
 
 .toolkit-icons_img {
-    max-height: 40px;
+    max-height: 2.5rem;
     object-fit: contain;
 }
 
@@ -462,6 +465,7 @@ i {
 
 #portrait {
     max-width: 350px;
+    width: 100%;
     border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, 0.1);
 }
@@ -580,11 +584,11 @@ i {
 }
 
 @media (max-width: 600px) {
-    #nav-list {
+    /* #nav-list {
         gap: 0;
         justify-content: space-evenly;
         width: 100%;
-    }
+    } */
 
     #nav-list a {
         padding: 15px 0;
@@ -593,17 +597,16 @@ i {
 
     .content-wrapper {
         padding: 50px 40px;
-        background-color: rgb(58, 58, 148);
-    }
-
-    h1 {
-        padding-right: 0;
     }
 }
 
 @media (max-width: 425px) {
     .content-wrapper {
-        padding: 50px 0;
+        padding: 50px 20px;
+    }
+
+    html {
+        font-size: 12px;
     }
 
     
