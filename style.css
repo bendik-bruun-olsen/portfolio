@@ -277,6 +277,7 @@ p {
 #contact_content-wrapper {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -379,6 +380,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-width: 800px;
 }
 
 #sender-details-wrapper {
@@ -455,7 +457,7 @@ p {
 }
 
 .toolkit-icons_img {
-    max-height: 2.5rem;
+    max-height: 40px;
     object-fit: contain;
 }
 
@@ -522,7 +524,7 @@ i {
 #contact input[type="text"] {
     outline: none;
     padding: 3px;
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: var(--faded-white);
     border: none;
     font-family: "Montserrat", sans-serif;;
@@ -531,13 +533,12 @@ i {
 #contact textarea {
     outline: none;
     padding: 3px;
-    border-radius: 5px;
+    border-radius: 3px;
     resize: none;
     background-color: var(--faded-white);
     border: none;
     font-family: "Montserrat", sans-serif;
     height: 150px;
-    max-width: 500px;
 }
 
 /* BUTTONS */
@@ -572,12 +573,14 @@ i {
     #contact_content-wrapper {
         flex-direction: column;
         gap: 0;
+        align-items: center;
     }
 
     #contact-info {
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 10px;
+        gap: 20px;
     }
 
     .connect-icons {
@@ -609,5 +612,9 @@ i {
 
     html {
         font-size: 12px;
+    }
+
+    #contact-form {
+        width: 275px;
     }
 }
