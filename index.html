@@ -150,20 +150,20 @@
                         <a href="./CV - Bendik Bruun-Olsen 2024.pdf" target="_blank"><img class="connect-icon" src="./images/icons/cv-icon.png" alt="CV icon"></a>
                     </div>
                 </div>
-                <form id="contact-form">
+                <form id="contact-form" action="https://airform.io/bendik-bo@live.com" method="post">
                     <div id="sender-details-wrapper">
                         <div id="sender-name-container">
                             <label for="sender-name">Navn <span class="input-required">*</span></label>
-                            <input type="text" id="sender-name" maxlength="100">
+                            <input type="text" name="sender-name" id="sender-name" maxlength="100">
                         </div>
                         <div id="sender-email-container">
                             <label for="sender-email">E-post <span class="input-required">*</span></label>
-                            <input type="text" id="sender-email" maxlength="100">
+                            <input type="text" name="sender-email" id="sender-email" maxlength="100">
                         </div>
                     </div>
                     <div id="sender-message-container">
                         <label for="sender-message">Melding <span class="input-required">*</span></label>
-                        <textarea id="sender-message" placeholder="Not implemented yet. Need back-end."></textarea>
+                        <textarea id="sender-message" name="sender-message"></textarea>
                     </div>
                     <div id="contact-send-btn-container">
                         <button id="contact-send-btn" type="submit">Send</button>
