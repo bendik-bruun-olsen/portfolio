@@ -28,6 +28,7 @@ header {
 main {
     background: linear-gradient(to top, #18214D, var(--standard-blue));
     max-width: 1440px;
+    width: 100%;
     box-shadow: 0 0 20px 10px rgba(18, 33, 78, 0.6);
 }
 
@@ -374,25 +375,26 @@ p {
 
 #contact-form {
     padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #sender-details-wrapper {
     display: flex;
-    margin-bottom: 10px;
+    justify-content: space-between;
 }
 
 #sender-name-container {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    padding-right: 20px;
+    width: 48%;
 }
 
 #sender-email-container {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    padding-left: 20px;
+    width: 48%;
 }
 
 #sender-message-container {
@@ -531,9 +533,6 @@ i {
     background-color: var(--faded-white);
     border: none;
     font-family: "Montserrat", sans-serif;
-}
-
-#sender-message {
     height: 150px;
     max-width: 500px;
 }
@@ -543,7 +542,6 @@ i {
     padding: 5px 10px;
     background: linear-gradient(to top, var(--standard-blue), #305fa5);
     color: var(--faded-white);
-    margin-top: 10px;
     font-size: 0.9rem;
     border-radius: 5px;
     border: none;
@@ -592,6 +590,7 @@ i {
 
     #nav-list a {
         padding: 15px 0;
+        font-size: 0.8rem;
     }
 
     .content-wrapper {
