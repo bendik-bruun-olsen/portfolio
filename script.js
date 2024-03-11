@@ -30,7 +30,7 @@ const projects = [
     },
     {
         title: "Drumkit",
-        description: "Vestibulum interdum, dolor sit amet gravida pulvinar, ipsum massa mattis turpis, ut dictum ante tellus quis ex. Quisque aliquet non tellus sodales consequat.",
+        description: "Spill av forskjellige tromme-lyder ved hjelp av hotkeys eller klikking på instrumentene",
         image: "drumkit.jpg",
         languages: ["HTML", "CSS", "JavaScript"],
         githubLink: "https://github.com/bendik-kodehode/Drumkit",

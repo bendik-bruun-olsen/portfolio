@@ -92,7 +92,7 @@ h1 {
     font-size: 5rem;
     color: var(--pure-white);
     text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
-    font-size: clamp(4rem, 10vw, 5rem);
+    font-size: 5rem;
     position: relative;
 }
 
@@ -229,7 +229,7 @@ p {
 }
 
 #projects {
-    padding: 15px 0 50px 0;
+    padding-bottom: 50px;
 }
 
 #contact {
@@ -277,6 +277,7 @@ p {
 #contact_content-wrapper {
     display: flex;
     flex-direction: row;
+    gap: 20px;
 }
 
 #about_content-container {
@@ -570,6 +571,7 @@ i {
 
     #contact_content-wrapper {
         flex-direction: column;
+        gap: 0;
     }
 
     #contact-info {
@@ -602,12 +604,10 @@ i {
 
 @media (max-width: 425px) {
     .content-wrapper {
-        padding: 50px 20px;
+        padding: 50px 30px;
     }
 
     html {
         font-size: 12px;
     }
-
-    
 }
