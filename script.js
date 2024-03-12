@@ -70,13 +70,14 @@ function generateProjectCards() {
     const title = document.createElement("h3");
     const description = document.createElement("p");
     const image = document.createElement("img");
+    const imageWebsiteAnchor = document.createElement("a");
     const iconsWrapper = document.createElement("div");
     const languageContainer = document.createElement("div");
     const sourceContainer = document.createElement("div");
     const githubIcon = document.createElement("img");
     const githubAnchor = document.createElement("a");
     const websiteIcon = document.createElement("img");
-    const websiteAnchor = document.createElement("a");
+    const websiteIconAnchor = document.createElement("a");
 
     e.languages.forEach(lang => {
         const languageItem = document.createElement("p");
@@ -87,16 +88,20 @@ function generateProjectCards() {
 
     title.textContent = e.title;
     description.textContent = e.description;
+
+    // Set default placeholder if image not provided
     e.image.length ? 
         image.src = `./images/project-images/${e.image}` : 
         image.src = defaultImage;
 
     githubIcon.src = "./images/icons/Github.png";
     websiteIcon.src = "./images/icons/website.png";
+    imageWebsiteAnchor.href = e.websiteLink;
     githubAnchor.href = e.githubLink;
-    websiteAnchor.href = e.websiteLink;
+    websiteIconAnchor.href = e.websiteLink;
+    imageWebsiteAnchor.target = "_blank";
     githubAnchor.target = "_blank";
-    websiteAnchor.target = "_blank";
+    websiteIconAnchor.target = "_blank";
 
     cardContainer.classList.add("card-container")
     textContainer.classList.add("projects_text-container");
@@ -111,10 +116,11 @@ function generateProjectCards() {
 
     textContainer.append(title, description);
     githubAnchor.append(githubIcon);
-    websiteAnchor.append(websiteIcon);
-    sourceContainer.append(githubAnchor, websiteAnchor);
+    websiteIconAnchor.append(websiteIcon);
+    sourceContainer.append(githubAnchor, websiteIconAnchor);
     iconsWrapper.append(sourceContainer, languageContainer);
-    cardContainer.append(image, textContainer, iconsWrapper);
+    imageWebsiteAnchor.append(image);
+    cardContainer.append(imageWebsiteAnchor, textContainer, iconsWrapper);
     projectsWrapper.append(cardContainer);
     })
 }
