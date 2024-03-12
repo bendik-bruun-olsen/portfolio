@@ -2,6 +2,7 @@ const navItems = document.querySelectorAll("#nav-list a");
 const activeLine = document.querySelector("#active-line");
 const defaultImage = "./images/img-placeholder.png";
 let isScrolling = false;
+let scrollTimeout
 
 const projects = [
     {
@@ -140,10 +141,10 @@ window.addEventListener("scroll", () => {
 });
 
 function updateActiveNavItem(sectionName) {
-    const navItem = document.querySelector(`a[href="#${sectionName}"]`);
     navItems.forEach(item => { 
         item.classList.remove("active-nav-item") 
     })
+    const navItem = document.querySelector(`a[href="#${sectionName}"]`);
     navItem.classList.add("active-nav-item");
     
     if (navItem) {
@@ -158,9 +159,12 @@ function handleScroll(sectionName) {
         top: targetSection.offsetTop,
         behavior: "smooth"
     })
-    setTimeout(() => {
+
+    // Timeout to compensate for scroll movement after clicking.
+    if(scrollTimeout) clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
         isScrolling = false;
-    }, 1000)
+    }, 800)
 }
 
 function findNearestSection() {

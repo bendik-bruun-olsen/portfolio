@@ -207,6 +207,10 @@ p {
     font-size: 0.8rem;
 }
 
+.heavy {
+    font-weight: 600;
+}
+
 /* SECTIONS */
 #hero {
     background-image: url(./images/Hero-img.png);
