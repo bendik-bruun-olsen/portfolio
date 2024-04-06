@@ -217,6 +217,7 @@ p {
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
     max-width: 1920px;
     display: flex;
@@ -225,6 +226,10 @@ p {
     margin: auto;
     position: relative;
     overflow-x: clip;
+}
+
+#hero {
+    transition: background-position 0.2s ease-out;
 }
 
 #about {
@@ -292,7 +297,7 @@ p {
 #about_content-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 50px;
 }
 
@@ -476,9 +481,7 @@ i {
 #portrait {
     max-width: 350px;
     width: 100%;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-}
+    border-radius: 50%;}
 
 .project-image {
     height: 180px;
