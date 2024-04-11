@@ -37,6 +37,14 @@ const projects = [
         githubLink: "https://github.com/bendik-kodehode/Drumkit",
         websiteLink: "https://bendik-kodehode.github.io/Drumkit/"
     },
+    {
+        title: "React Calculator",
+        description: "En kalkulator som kan gjøre grunnleggende matematiske operasjoner som pluss, minus, dele og gange. Laget med rammeverket React.",
+        image: "calculator.jpg",
+        languages: ["HTML", "CSS", "JavaScript"],
+        githubLink: "https://github.com/bendik-kodehode/React_Calculator",
+        websiteLink: "https://reactprojectcalculator.netlify.app/"
+    }
 ]
 
 window.addEventListener("resize", () => {
